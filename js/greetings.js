@@ -1,0 +1,32 @@
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_ClASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
+function onLoginSubmit(event) {
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_ClASSNAME);
+    const username = loginInput.ariaValueMax;
+    localStorage.setItem(USERNAME_KEY, username);
+    paintGreetings(username);
+    
+}
+
+function paintGreetings(username) {
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_ClASSNAME);
+}
+
+loginForm.addEventListener("submit", onLoginSubmit);
+
+const saveUsername = localStorage.getItem(USERNAME_KEY);
+
+if (saveUsername === null){
+    loginForm.classList.remove(HIDDEN_ClASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+
+} else{
+    paintGreetings(saveUsername);
+}
