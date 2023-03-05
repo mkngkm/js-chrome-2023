@@ -6,18 +6,18 @@ const planList = document.getElementById("studyplan-list");
 
 const PLANS_KEY ="plans"
 
-let plans = [];
+let Plans = [];
 
 
 function savePlans() {
-    localStorage.setItem(PLANS_KEY, JSON.stringify(plans));
+    localStorage.setItem(PLANS_KEY, JSON.stringify(Plans));
 }
 
 
 function deletePlan(event) {
     const li = event.target.parentElement;
     li.remove();
-    plans = plans.filter(plan => plan.id !== parseInt(li.id));
+    Plans = Plans.filter(plan => plan.id !== parseInt(li.id));
     savePlans() //지운 배열을 다시 local storage에 저장
 }
 
@@ -43,7 +43,7 @@ function handlePlanSubmit(event){
         text: newPlan,
         id: Date.now(),
     }
-    plans.push(newPlanObj);
+    Plans.push(newPlanObj);
     paintPlan(newPlanObj);
     savePlans();
     
@@ -57,6 +57,6 @@ const savedPlans = localStorage.getItem(PLANS_KEY);
 
 if(savedPlans) {
     const parsedPlans = JSON.parse(savedPlans);
-    plans = parsedPlans;
+    Plans = parsedPlans;
     parsedPlans.forEach(paintPlan);
 }
