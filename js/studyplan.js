@@ -10,7 +10,7 @@ let plans = [];
 
 
 function savePlans() {
-    localStorage.setItem(PLANS_KEY, JSON.stringify([plans]));
+    localStorage.setItem(PLANS_KEY, JSON.stringify(plans));
 }
 
 
