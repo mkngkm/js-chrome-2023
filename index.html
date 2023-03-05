@@ -8,29 +8,64 @@
     <title>Momentum App</title>
 </head>
 <body>
-    <form class = "hidden" id="login-form">
-        <input required maxlength="15" type="text" placeholder="What is yout name?"/>
-        <input type="submit" value="Log In"/>
+    <h1 id="title">MOMENTUM</h1>
+
+    <form class="hidden" id="login-form">
+        <h1>What is your name?</h1>
+        <div>
+            <input required maxlength="15" type="text" placeholder="Write your name to login"/>
+            <input type="submit" value="Log In"/>
+        </div>
     </form>
-    <h2 id="clock">00:00</h2>
-    <h1 id="greeting" class = "hidden"></h1>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
+    
+
+    <div class="status-now">
+        <h2 id="clock">00:00</h2>
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <h1 id="greeting" class = "hidden shown"></h1>
+
+    <div class="two-lists">
+        <div class="lists-column">
+            <h2 class="lists-title">Today Study Plans</h2>
+            <form id="studyplan-form" class="lists-form">
+                <input type="text" placeholder="Write Your today Study Plans" required />
+            </form>
+            <div id="studyplan-lists" class="hidden">
+                <ul id="studyplan-list"></ul>
+            </div>
+        </div>
+        <div class="lists-column">
+            <h2 class="lists-title">My To-do Lists</h2>
+            <form id="todo-form" class="lists-form">
+                <input type="text" placeholder="Write a To Do and Press Enter" required />
+            </form>
+            <div id="todo-lists" class="hidden">
+                <ul id="todo-list"></ul>
+            </div>
+        </div>
+        
+    </div>
+
+
+   
+
+
     <div id="quote">
         <span></span>
         <span></span>
     </div>
-    <div id="weather">
-        <span></span>
-        <span></span>
-    </div>
+    
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/studyplan.js"></script>
 </body>
 </html>
