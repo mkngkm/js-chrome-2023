@@ -1,3 +1,141 @@
+.body{
+    background-color: rgb(90, 76, 102);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .hidden{
     display: none;
+}
+#title{
+    color: white;
+    display: flex;
+    width: 300px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    
+}
+#greeting{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-size: 40px;
+}
+
+
+.status-now{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 10px;
+    right: 40px;
+    color: rgb(238, 232, 244);
+    
+}
+#clock{
+    margin-bottom: 0px;
+    font-size: 25px;
+}
+#weather{
+    font-size: 15px;
+}
+
+.shown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white
+    
+}
+.shown input{
+    border: none;
+    padding: 15px 3px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+
+.two-lists{
+    display: flex;
+    justify-content: space-between;
+}
+.lists-title{
+    margin: 0px;
+    color: white;
+}
+.lists-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 80px 10px 80px;
+
+}
+.lists-form input{
+    border: none;
+    font-size: 18px;
+    width: 300px;
+    opacity: 0.5;
+    margin: 4px 0px;
+    
+}
+.lists{
+    width: 400px;
+    height: 300px;
+    background: rgb(255, 255, 255, 0.7);
+    border-radius: 20px;
+    margin: 10px 10px 0px 10px;
+}
+
+
+
+@keyframes fadeIn {
+    from{
+        opacity: 0.4;
+    }
+    to {
+        opacity: 0.9;
+    }
+}
+
+.bgImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 1.5s linear;
+}
+
+#quote {
+    color: white;
+    width: 100%;
+    height: 80px;
+    font-style: italic;
+    position: fixed;
+    bottom: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#quote span:first-child{
+    font-size: 20px;
+}
+#quote span:last-child{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
 }
